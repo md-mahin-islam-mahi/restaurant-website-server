@@ -1,0 +1,22 @@
+[
+    {
+        "_id": 1,
+        "img": "https://i.ibb.co/SQgXyzc/slide1.jpg",
+        "name": "Salads"
+    },
+    {
+        "_id": 2,
+        "img": "https://i.ibb.co/sJGMYTg/slide3.jpg",
+        "name": "Soupe"
+    },
+    {
+        "_id": 3,
+        "img": "https://i.ibb.co/q7yvsL6/slide2.jpg",
+        "name": "Pizza"
+    },
+    {
+        "_id": 4,
+        "img": "https://i.ibb.co/DRSWjxF/slide4.jpg",
+        "name": "Deserts"
+    }
+]

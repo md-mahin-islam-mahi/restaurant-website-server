@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -27,9 +27,18 @@ async function run() {
     const banners = client.db("Restaurant").collection("banner"); // Banner
     const swippes = client.db("Restaurant").collection("swipps") // Swipps
 
+    // Banner API
     app.get("/banners", async(req, res) => {
         const query = {};
         const cursor = banners.find(query);
+        const result = await cursor.toArray();
+        res.send(result);
+    });
+
+    // Swippe API
+    app.get("/swippes", async(req, res) => {
+        const query = {};
+        const cursor = swippes.find(query);
         const result = await cursor.toArray();
         res.send(result);
     })
