@@ -23,7 +23,17 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    
+    // Data for the banner and swipper...
+    const banners = client.db("Restaurant").collection("banner"); // Banner
+    const swippes = client.db("Restaurant").collection("swipps") // Swipps
+
+    app.get("/banners", async(req, res) => {
+        const query = {};
+        const cursor = banners.find(query);
+        const result = await cursor.toArray();
+        res.send(result);
+    })
+
   } finally {
     
   }
